@@ -26,7 +26,7 @@
                     <button class="hide-side"><i class="fas fa-chevron-left"></i></i></button>
                     <button class="hide-side" style="display: none;"><i class="fas fa   -chevron-right"></i></i></button>
                             <div class="sidebar-container">
-                                
+                                <button onclick="saveCanvas()">Save Board</button>
                                 <div class="sidebar-separater"></div>
                             </div>
                     </div>
@@ -42,9 +42,20 @@
         </div>
     </div>
     <script src="html2canvas.js"></script>
-
     <script>
-        
+        const saveCanvas = () =>{
+            
+            html2canvas(document.querySelector("#board-container"),{ logging: true, letterRendering: 1, allowTaint: false, useCORS: true }).then(canvas => {
+                    var imgData = canvas.toDataURL('image/png');
+                    console.log(imgData)
+
+                    var link = document.createElement('a');
+                    link.download = "board.png";
+                    link.href = imgData;
+                    link.click();
+                
+                });
+        }
     </script>
 </body>
 
