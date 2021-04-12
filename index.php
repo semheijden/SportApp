@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>SportApp</title>
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, viewport-fit=cover">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" rel="stylesheet">
+    <link href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel='stylesheet' type='text/css' href='style/style.css'>
+</head>
+
+<body>
+    <div class="main-wrapper">
+        <div class="main-container">
+        <div class="top">
+                <div class="topbar-wrapper">
+                    <div class="topbar-container">
+                        <div class="topbar-separater"></div>
+                    </div>
+                </div>
+            </div>  
+                <div class="side">
+                    <div class="sidebar-wrapper">
+                    <button class="hide-side"><i class="fas fa-chevron-left"></i></i></button>
+                    <button class="hide-side" style="display: none;"><i class="fas fa   -chevron-right"></i></i></button>
+                            <div class="sidebar-container">
+                                <div class="sidebar-separater"></div>
+                            </div>
+                    </div>
+                </div>
+                <div class="board">
+                    <div class="board-wrapper">
+                        <div class="board-container">
+
+                        </div>
+                    </div>
+                </div>
+            </div>                  
+        </div>
+    </div>
+
+</body>
+
+</html>
+
+<script>
+     jQuery( ".hide-side" ).click(function() {
+    jQuery('.sidebar-container').toggle();
+    jQuery('.fas fa-chevron-right').toggle();
+    jQuery('.fas fa-chevron-left').toggle();
+    });
+</script>
