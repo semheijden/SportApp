@@ -12,7 +12,6 @@
 </head>
 
 <body>
-    <div id="app">
     <div class="main-wrapper">
         <div class="main-container">
         <div class="top">
@@ -27,9 +26,7 @@
                     <button class="hide-side"><i class="fas fa-chevron-left"></i></i></button>
                     <button class="hide-side" style="display: none;"><i class="fas fa   -chevron-right"></i></i></button>
                             <div class="sidebar-container">
-                                <button onclick="captureBoard()" class="bg-black px-4 py-2 text-white rounded-full">
-                                    Save Canvas
-                                </button>
+                                
                                 <div class="sidebar-separater"></div>
                             </div>
                     </div>
@@ -44,20 +41,10 @@
             </div>                  
         </div>
     </div>
-    </div>
-    <script src="html2canvas.min.js"></script>
-    <script>
-        const captureBoard = () => {
-                html2canvas(document.querySelector("#board-container"),{ logging: true, letterRendering: 1, allowTaint: false, useCORS: true }).then(canvas => {
-                    var imgData = canvas.toDataURL('image/png');
-                    console.log(imgData)
+    <script src="html2canvas.js"></script>
 
-                    var link = document.createElement('a');
-                    link.download = "board.png";
-                    link.href = imgData;
-                    link.click(); 
-                });
-        }
+    <script>
+        
     </script>
 </body>
 
