@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="tailwind.css" rel="stylesheet">
+    <link href="styles.css" rel="stylesheet">
+</head>
+<body>
+
+    <div id="app">
+    <div id="capture" v-bind:style="{backgroundColor:color}" class="main-container">
+        <h4>{{ message }}</h4>
+        <img src="wtf.png">
+    </div>
+        <input type="text" v-model="message">
+        <input type="color" v-model="color">
+        <button @click="saveCanvas()" class="bg-black px-4 py-2 text-white rounded-full">
+            Save Canvas
+        </button>
+</div>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <script src="html2canvas.min.js"></script>
+    <script>
+
+    var app = new Vue({
+        el: '#app',
+        data:{
+            message: 'Hello Vue!',
+            color: '#ccc',
+        },
+        methods: {
+            saveCanvas(){
+                html2canvas(document.querySelector("#capture"),{ logging: true, letterRendering: 1, allowTaint: false, useCORS: true }).then(canvas => {
+                    var imgData = canvas.toDataURL('image/png');
+                    console.log(imgData)
+
+                    var link = document.createElement('a');
+                    link.download = "board.png";
+                    link.href = imgData;
+                    link.click();
+                
+                });
+            }
+        }
+    })
+    
+    </script>
+</body>
+</html>
