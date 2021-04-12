@@ -23,9 +23,8 @@
             </div>  
                 <div class="side">
                     <div class="sidebar-wrapper">
-                    <button class="hide-side"><i class="fas fa-chevron-left"></i></i></button>
-                    <button class="hide-side" style="display: none;"><i class="fas fa   -chevron-right"></i></i></button>
-                            <div class="sidebar-container">
+                    <button class="hide-side" onclick="toggleSide() "><i class="fas fa-chevron-left" id="fas fa-chevron-left" style="display:block;"></i><i class="fas fa-chevron-right" id="fas fa-chevron-right" style="display:none;"></i></button>
+                            <div class="sidebar-container" id="sidebar-container" style="display:block;">
                                 <div class="sidebar-separater"></div>
                             </div>
                     </div>
@@ -46,9 +45,28 @@
 </html>
 
 <script>
-     jQuery( ".hide-side" ).click(function() {
-    jQuery('.sidebar-container').toggle();
-    jQuery('.fas fa-chevron-right').toggle();
-    jQuery('.fas fa-chevron-left').toggle();
-    });
+    function toggleSide() {
+        var x = document.getElementById("fas fa-chevron-left");
+        var y = document.getElementById("fas fa-chevron-right");
+        var s = document.getElementById("sidebar-container");
+
+
+        if (x.style.display === "none") {
+            x.style.display = "block";
+        } else {
+            x.style.display = "none";
+        }
+
+        if (y.style.display === "none") {
+            y.style.display = "block";
+        } else {
+            y.style.display = "none";
+        }
+
+        if (s.style.display === "none") {
+            s.style.display = "block";
+        } else {
+            s.style.display = "none";
+        }
+    }
 </script>
