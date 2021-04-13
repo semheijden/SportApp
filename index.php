@@ -23,18 +23,21 @@
             </div>
             <div class="side">
                 <div class="sidebar-wrapper">
-                    <button class="hide-side" onclick="toggleSide() "><i class="fas fa-chevron-left"
-                            id="fas fa-chevron-left" style="display:block;"></i><i class="fas fa-chevron-right"
-                            id="fas fa-chevron-right" style="display:none;"></i></button>
+                    <button class="hide-side" onclick="toggleSide() "><i class="fas fa-chevron-left" id="fas fa-chevron-left" style="display:block;"></i><i class="fas fa-chevron-right" id="fas fa-chevron-right" style="display:none;"></i></button>
                     <div class="sidebar-container" id="sidebar-container" style="display:block;">
-                        <button class="hide-side" style="display: none;"><i
-                                class="fas fa   -chevron-right"></i></i></button>
-                        <div class="sidebar-container">
-                            <button id="ExportButton" onclick="saveCanvas()">Export</button>
-                            <div class="ExportDone" id="ExportDone">
-
+                        <div class="category-wrapper">
+                            <div class="category-container">
+                                <?php 
+                                    require_once( "src/modules/category.php"); 
+                                ?>
                             </div>
-
+                        </div>
+                        <div class="export-wrapper">
+                            <div class="export-container">
+                                <?php 
+                                    require_once( "src/modules/export.php"); 
+                                ?>
+                            </div>
                         </div>
                         <div class="sidebar-separater"></div>
                     </div>
@@ -43,7 +46,6 @@
             <div class="board">
                 <div class="board-wrapper">
                     <div class="board-container" id="board-container">
-                        <img src="testimg/wtf.png">
                     </div>
                 </div>
             </div>
@@ -82,6 +84,7 @@
             var x = document.getElementById("fas fa-chevron-left");
             var y = document.getElementById("fas fa-chevron-right");
             var s = document.getElementById("sidebar-container");
+            var e = document.getElementById("board-container");
 
 
             if (x.style.display === "none") {
@@ -98,8 +101,10 @@
 
             if (s.style.display === "none") {
                 s.style.display = "block";
+                e.style.width = "80%"
             } else {
                 s.style.display = "none";
+                e.style.width = "100%"
             }
         }
     </script>
