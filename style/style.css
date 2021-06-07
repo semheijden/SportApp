@@ -44,7 +44,7 @@ body {
     height: 90vh;
     float: left;
     background-color: #87CDEF;
-    /* background-image: url("../background.png"); */
+    background-image: url("images/backgrounds/veld1.png");
 }
 
 button.hide-side {
@@ -130,4 +130,22 @@ button.hide-side {
 .boardsettings-container {
     height: 100%;
     width: 20%;
+}
+
+select.background-combobox {
+    width: 100%;
+    background: #36393F;
+    height: 35px;
+    border: solid 3px;
+    color: lightgray;
+    font-weight: bold;
+}
+
+.background-combobox {
+    width: 90%;
+    height: 40px;
+    margin: 0 auto;
+    margin-top: 4px;
+    background: #36393F;
+    border-radius: 13px;
 }
