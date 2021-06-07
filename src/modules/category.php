@@ -8,7 +8,7 @@
      $ext = strtolower(pathinfo($image_name, PATHINFO_EXTENSION));
      if (in_array($ext, $supported_format))
          {
-           echo '<img src="'.$image_name .'" alt="'.$image_name.'" onclick="moveImage(this)" />';
+           echo '<img src="'.$image_name .'" alt="'.$image_name.'" id="img'.$i.'" onclick="moveImage(this)" />';
          } else {
              continue;
          }
@@ -18,10 +18,16 @@
 
 <script>
 
+   let i = 1
+
     const moveImage = (line) => {        
         var container = document.getElementById("board-container");
         var childElemnent = document.createElement("img");
         childElemnent.src = line.src
-        container.appendChild(childElemnent);
+        childElemnent.id = line.id + i
+        childElemnent.tabIndex = "1"
+        childElemnent.onkeyup = function(e) { removeAddedElement(this.id, e) }
+        container.appendChild(childElemnent)
+        i = i + 1
     }
 </script>

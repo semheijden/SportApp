@@ -17,6 +17,10 @@
             <div class="top">
                 <div class="topbar-wrapper">
                     <div class="topbar-container">
+                                <?php 
+                                    require_once( "src/modules/boardcustom.php"); 
+                                ?>
+                    </div>
                         <div class="topbar-separater"></div>
                     </div>
                 </div>
