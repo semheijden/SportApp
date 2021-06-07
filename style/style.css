@@ -120,3 +120,14 @@ button.hide-side {
 .category-list::-webkit-scrollbar {
     display: none;
 }
+
+
+.boardsettings-container-inner {
+    width: 100%;
+    height: 100%;
+}
+
+.boardsettings-container {
+    height: 100%;
+    width: 20%;
+}

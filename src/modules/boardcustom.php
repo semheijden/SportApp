@@ -1,4 +1,6 @@
 <div class="boardsettings-container">
+    <div class="boardsettings-container-inner">
+    </div>
 </div>
 
 <script>
