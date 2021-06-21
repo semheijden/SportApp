@@ -64,13 +64,15 @@ button.hide-side {
 
 .ExportButton {
     min-width: 130px;
-    height: 50px;
+    height: 40px;
     border-radius: 35px;
     font-weight: bold;
     color: white;
     background: #7289DA;
     display: block;
-    margin: 3% auto;
+    margin: 0% auto;
+    margin-left: 20px;
+    float: left;
 }
 
 .export-container {
@@ -187,4 +189,11 @@ p.text-amount {
     float: right;
     width: 20%;
     height: 100%;
+}
+
+i.fas.fa-undo {
+    font-size: 32px;
+    margin-top: 1vh;
+    margin-left: 4vw;
+    color: lightgray;
 }

@@ -22,6 +22,7 @@
     }
 
     const triggerElement  = (id, e) => {
+        console.log(id)
         if (e.keyCode != 82) return;
             let element = document.getElementById(id);
             let rotation = element.style.transform
