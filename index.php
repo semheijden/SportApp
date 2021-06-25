@@ -17,6 +17,7 @@
             <div class="top">
                 <div class="topbar-wrapper">
                     <div class="topbar-container">
+                    <input id="slider1" class="slider" onchange="slider()" type="range" min="50" max="100" step="25" value="100">
                                 <?php 
                                     require_once( "src/modules/amount.php"); 
                                     require_once( "src/modules/boardcustom.php"); 
@@ -111,6 +112,21 @@
                 s.style.display = "none";
                 e.style.width = "100%"
             }
+        }
+
+        slider = () => {
+                console.log(document.getElementById("slider1").value);
+                if(document.getElementById("slider1").value == 75){
+                    $('.scale').not($(this)).removeClass('scaled50')
+                    $('.scale').not($(this)).addClass('scaled75')
+                }else if(document.getElementById("slider1").value == 50){
+                    $('.scale').not($(this)).removeClass('scaled75')
+                    $('.scale').not($(this)).addClass('scaled50')
+                }else if(document.getElementById("slider1").value == 100){
+                    $('.scale').not($(this)).removeClass('scaled75')
+                    $('.scale').not($(this)).removeClass('scaled50')
+                    $('.scale').not($(this)).addClass('scaled100')
+                }
         }
     </script>
 </body>

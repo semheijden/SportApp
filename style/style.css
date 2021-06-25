@@ -197,3 +197,19 @@ i.fas.fa-undo {
     margin-left: 4vw;
     color: lightgray;
 }
+
+.scaled75{
+    transform: scale(0.75, 0.75); /* Equal to scaleX(2) scaleY(0.5) */
+}
+.scaled50{
+    transform: scale(0.50, 0.50); /* Equal to scaleX(2) scaleY(0.5) */
+}
+.scaled100{
+    transform: scale(1 ,1); /* Equal to scaleX(2) scaleY(0.5) */
+}
+.slider{
+    position: fixed;
+    bottom: 0;
+    right: 0;
+z-index: 9999;
+}
