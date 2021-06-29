@@ -18,12 +18,31 @@
     const removeAddedElement  = (id, e) => {
         if (e.keyCode != 46) return;
         let element = document.getElementById(id);
-        element.parentNode.removeChild(document.getElementById(id));
+        element.parentNode.removeChild(document.getElementById(id));    
     }
 
     const triggerElement  = (id, e) => {
-        console.log(id)
-        if (e.keyCode != 82) return;
+        if (e.keyCode == 38) {
+            let element = document.getElementById(id);
+            let z = element.style.zIndex
+            let o = element.style.opacity  
+            if (10 <= z) z = 9
+            if (0.6 >= o) o = 0.7
+            element.style.zIndex = parseInt(z)  + 1
+            element.style.opacity = o  - 0.1
+        }
+
+        if (e.keyCode == 40) {
+            let element = document.getElementById(id);
+            let z = element.style.zIndex
+            let o = element.style.opacity 
+            if (1 >= z) z = 2
+            if (1 >= o) o = 0.9
+            element.style.zIndex = parseInt(z)  - 1
+            element.style.opacity = o  + 0.1
+        }
+
+        if (e.keyCode == 82) {
             let element = document.getElementById(id);
             let rotation = element.style.transform
             let degree = element.style.transform.replace("rotate(","")
@@ -33,4 +52,5 @@
             console.log("r" + rotation) 
             element.style.transform = "rotate("+rotation+"deg)"   
         }
+    }
 </script>

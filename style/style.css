@@ -12,7 +12,7 @@ body {
 
 .sidebar-container {
     width: 20%;
-    height: 100vh;
+    height: 90vh;    
     background-color: #2F3136;
     min-width: 130px;
     float: left;
@@ -197,6 +197,12 @@ i.fas.fa-undo {
     margin-left: 4vw;
     color: lightgray;
 }
+
+html {
+    height: 100%;
+    overflow: hidden;
+}
+
 
 .scaled75{
     transform: scale(0.75, 0.75); /* Equal to scaleX(2) scaleY(0.5) */
