@@ -38,14 +38,13 @@
       childElemnent.tabIndex = "1"
       childElemnent.className  = "materiaal"
       childElemnent.style.transform = "rotate(0deg)"
-      childElemnent.style.position = "absolute"
+      childElemnent.style.position = "relatie"
       childElemnent.style.zIndex = 1
       childElemnent.style.opacity = 1
       childElemnent.onkeyup = function(e) { removeAddedElement(this.id, e) }
       childElemnent.onkeydown = function(e) { triggerElement(this.id, e) }
       container.appendChild(childElemnent)
       $( ".materiaal" ).draggable()
-
       i = i + 1
     }
 

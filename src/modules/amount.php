@@ -1,7 +1,7 @@
 <div class="boardsettings-container">
     <div class="boardsettings-container-inner">
         <div class="amount-container">
-        <p class="text-amount">Aantal toe voegen</p>
+        <p class="text-amount">Aantal toevoegen</p>
         <input id="amount" type="number" value="1"/>
         </div>
     </div>
@@ -16,12 +16,16 @@
     }
 
     const removeAddedElement  = (id, e) => {
+        console.log(id, e);
         if (e.keyCode != 46) return;
         let element = document.getElementById(id);
+        console.log(element,"element")
+        element.style.position = "absolute";
         element.parentNode.removeChild(document.getElementById(id));    
     }
 
     const triggerElement  = (id, e) => {
+       
         if (e.keyCode == 38) {
             let element = document.getElementById(id);
             let z = element.style.zIndex
@@ -54,3 +58,4 @@
         }
     }
 </script>
+

@@ -51,7 +51,7 @@
             </div>
             <div class="board">
                 <div class="board-wrapper">
-                    <div class="board-container" id="board-container">
+                    <div class="board-container scale" id="board-container">
                     </div>
                 </div>
             </div>
@@ -114,19 +114,39 @@
             }
         }
 
+        
+
         slider = () => {
                 console.log(document.getElementById("slider1").value);
+                
+    
+                
+
                 if(document.getElementById("slider1").value == 75){
                     $('.scale').not($(this)).removeClass('scaled50')
+                    $('.scale').not($(this)).removeClass('scaled100')
                     $('.scale').not($(this)).addClass('scaled75')
+
+
                 }else if(document.getElementById("slider1").value == 50){
                     $('.scale').not($(this)).removeClass('scaled75')
+                    $('.scale').not($(this)).removeClass('scaled100')
                     $('.scale').not($(this)).addClass('scaled50')
+
                 }else if(document.getElementById("slider1").value == 100){
                     $('.scale').not($(this)).removeClass('scaled75')
                     $('.scale').not($(this)).removeClass('scaled50')
                     $('.scale').not($(this)).addClass('scaled100')
                 }
+                // var value = document.getElementById("slider1").value;
+                // var cont = document.getElementsByClassName('board-container');
+                // var elements = document.getElementsByClassName('materiaal');
+
+
+                // Array.from(elements).forEach(function(element) {
+
+
+                // });
         }
     </script>
 </body>
